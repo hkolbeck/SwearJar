@@ -9,7 +9,7 @@
         "https://twitter.com/*"
       ],
       "js": [
-        "content_scripts/sj_twitter.js"
+        "content_scripts/shared.js", "content_scripts/chrome/sj_twitter.js"
       ],
       "run_at": "document_idle"
     },
@@ -18,9 +18,27 @@
         "https://*.facebook.com/*"
       ],
       "js": [
-        "content_scripts/sj_facebook.js"
+        "content_scripts/shared.js", "content_scripts/chrome/sj_facebook.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://*.linkedin.com/*"
+      ],
+      "js": [
+        "content_scripts/shared.js", "content_scripts/chrome/sj_linkedin.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://*.instagram.com/*"
+      ],
+      "js": [
+        "content_scripts/shared.js", "content_scripts/chrome/sj_instagram.js"
+      ],
+      "run_at": "document_idle"
     }
   ],
   "permissions": [
@@ -34,7 +52,7 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "3rdparty/iro.min.js"
+        "3rdparty/iro.min.js", "audio/*", "content_scripts/shared.js"
       ],
       "matches": [
         "<all_urls>"

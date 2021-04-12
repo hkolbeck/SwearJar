@@ -1,0 +1,1 @@
+setInterval(buildFinder("textarea", chrome.storage.sync), 500)
