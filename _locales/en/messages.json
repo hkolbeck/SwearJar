@@ -6,7 +6,7 @@
     "message": "Example of text on this background"
   },
   "audio_picker_title": {
-    "message": "Audio Warning"
+    "message": "Warning Sound"
   },
   "none_audio_choice": {
     "message": "None"
@@ -27,7 +27,7 @@
     "message": "Run On Websites"
   },
   "bad_words_title": {
-    "message": "Bad Words"
+    "message": "Things I'm Trying To Stop Saying"
   },
   "add_a_bad_word_placeholder": {
     "message": "Add a word"

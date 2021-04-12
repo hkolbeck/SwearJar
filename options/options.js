@@ -163,9 +163,10 @@ chrome.storage.sync.get(configKeys, result => {
         }
     }
 
-    const regexp = new RegExp('\\P{Letter}', 'iug')
+    const regexp = new RegExp('[^\\p{Letter} \'"`~?!&:;.,/-]', 'iug')
     function saveInput() {
-        let txt = input.value.replace(regexp, '');
+        let txt = input.value.replace(regexp, '').replace(/\s/g, '\xa0');
+
         if (txt) {
             let span = buildWordSpan(txt);
             wordBox.insertBefore(span, input)
