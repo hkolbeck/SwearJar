@@ -1,7 +1,7 @@
 SwearJar
 ========
 
-Helps you stop using "bad" words on social media. You choose the words.
+A Chrome extension that helps you stop using "bad" words on social media. You choose the words.
 
 
 Loading
@@ -16,3 +16,12 @@ Audio
 -----
 
 All alert sounds from [ZapSplat](https://www.zapsplat.com)
+
+
+TODO
+----
+
+- Nicer settings page
+- Add more locales
+- Better logo
+- Suggested word-sets
