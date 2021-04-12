@@ -68,5 +68,5 @@ function playAudio(audio) {
 
     let audioElement = document.createElement("audio")
     audioElement.src = audio
-    audioElement.play()
+    audioElement.play().catch(err => console.log(`Couldn't play warning sound: ${err}`))
 }

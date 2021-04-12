@@ -85,9 +85,8 @@ chrome.storage.sync.get(configKeys, result => {
             let audioElement = document.createElement("audio")
             audioElement.src = audioSelector.value
             audioElement.play().catch(err => console.log(`Failed to play audio: ${err}`))
-            selectedAudioUrl = audioSelector.value
         }
-
+        selectedAudioUrl = audioSelector.value
         changed = true
     })
 
