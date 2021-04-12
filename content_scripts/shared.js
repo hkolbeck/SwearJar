@@ -25,7 +25,8 @@ function buildFinder(selector, storage, checkEnabled, elementTraverser) {
                     return
                 }
 
-                let badWordPatterns = result.badWords.map(word => new RegExp(`(^|[\\P{Letter}])(${word})([\\P{Letter}]|$)`, "iug"))
+                let badWordPatterns = result.badWords.map(word =>
+                    new RegExp(`(^|[\\P{Letter}])(${word.replace(/\xa0/g, ' +')})([\\P{Letter}]|$)`, "iug"))
                 editors.forEach(editor => {
                     let anyMatched = false
                     let textContent = editor.textContent;
