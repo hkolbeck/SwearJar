@@ -1,1 +1,2 @@
-setInterval(buildFinder("textarea", chrome.storage.sync), 500)
+let storage = chrome.storage.sync;
+setInterval(buildFinder("textarea", storage, checkEnabled(storage, "checkInstagram")), 500)

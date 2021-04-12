@@ -1,1 +1,2 @@
-setInterval(buildFinder("[role=presentation]", chrome.storage.sync), 500)
+let storage = chrome.storage.sync;
+setInterval(buildFinder("[role=presentation]", storage, checkEnabled(storage, "checkFacebook")), 500)

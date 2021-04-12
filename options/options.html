@@ -9,24 +9,47 @@
 <body>
 <div id="left-controls">
     <div id="color-picker-box" class="left-box left-box-lower-border">
-        <span id="warning-color-title" class="left-title">${i18n(Warning Color)}</span>
+        <span id="warning-color-title" class="left-title"></span>
         <div id="color-picker-wrapper">
             <div id="color-picker"></div>
         </div>
+        <div id="color-picker-examples-border">
+            <div id="color-picker-examples">
+                <div id="color-picker-black-example"></div>
+                <div id="color-picker-white-example"></div>
+            </div>
+        </div>
+        <div></div>
     </div>
-    <div id="website-picker-box" class="left-box left-box-lower-border">
-        <span id="websites-title" class="left-title">${i18n(Websites)}</span>
-        <div id="websites">***Websites!***</div>
+    <div id="audio-picker-box" class="left-box left-box-lower-border">
+        <span id="audio-title" class="left-title"></span>
+        <div id="audio">
+            <select id="audio-alert" name="audio-alert">
+            </select>
+        </div>
     </div>
-    <div id="audio-picker-box" class="left-box">
-        <span id="audio-title" class="left-title">${i18n(Audio Warning)}</span>
-        <div id="audio">***Audio Selector***</div>
+    <div id="website-picker-box" class="left-box">
+        <span id="websites-title" class="left-title"></span>
+        <div id="websites">
+            <input class="socmed-check" type="checkbox" id="twitter-check" name="twitter-check" value="true">
+            <label for="twitter-check"><span class="check-label"></span>Twitter</label><br>
+            <input class="socmed-check" type="checkbox" id="fb-check" name="fb-check" value="true">
+            <label for="fb-check"><span class="check-label"></span>Facebook</label><br>
+            <input class="socmed-check" type="checkbox" id="linkedin-check" name="linkedin-check" value="true">
+            <label for="linkedin-check"><span class="check-label"></span>Linkedin</label><br>
+            <input class="socmed-check" type="checkbox" id="insta-check" name="insta-check" value="true">
+            <label for="insta-check"><span class="check-label"></span>Instagram</label><br>
+        </div>
     </div>
 </div>
 <div id="bad-words-box">
-    <div id="bad-words-title">${i18n(Bad Words)}</div>
+    <div id="bad-words-title"></div>
     <div id="bad-words">
-        <span id="saved-bad-words"><input id="bad-words-input" type="text" value="" placeholder="${i18n(Add a word)}"></span>
+        <span id="saved-bad-words"><input id="bad-words-input" type="text" value=""></span>
+    </div>
+    <div id="bad-word-search">
+        <label id="bad-words-search-input-label"></label>
+        <input id="bad-words-search-input" type="text"/>
     </div>
 </div>
 </body>

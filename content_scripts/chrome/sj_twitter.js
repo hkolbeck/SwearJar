@@ -8,4 +8,5 @@ function getAncestor(editor) {
     return div
 }
 
-setInterval(buildFinder(".DraftEditor-root", chrome.storage.sync, getAncestor), 500)
+let storage = chrome.storage.sync;
+setInterval(buildFinder(".DraftEditor-root", storage, checkEnabled(storage, "checkTwitter"), getAncestor), 500)

@@ -3,6 +3,11 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: #FDFDFD;
+    overflow: hidden;
+}
+
+#warning-color-title::before {
+    content: "__MSG_warning_color_title__";
 }
 
 #color-picker {
@@ -13,6 +18,37 @@ body, html {
     margin: 15px auto;
     display: flex;
 }
+
+#color-picker-examples-border {
+    border: 5px #555555 solid;
+    margin-bottom: 10px;
+}
+
+#color-picker-examples {
+    border: 5px solid white;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+
+
+#color-picker-black-example {
+    color: black;
+    margin: 10px;
+}
+
+#color-picker-black-example::before {
+    content: "__MSG_warning_color_text_example__";
+}
+
+#color-picker-white-example {
+    color: white;
+    margin: 10px;
+}
+
+#color-picker-white-example::before {
+    content: "__MSG_warning_color_text_example__";
+}
+
 
 #left-controls {
     height: 100%;
@@ -35,12 +71,42 @@ body, html {
 }
 
 .left-box-lower-border {
-    min-height: 30%;
+    min-height: 10%;
     border-bottom: 10px double #555555;
 }
 
+#audio-title::before {
+    content: "__MSG_audio_picker_title__";
+}
+
 #audio-picker-box {
-    height: 20%;
+    min-height: 15%;
+}
+
+#audio-alert {
+    background-color: #eeeeee;
+    margin-top: 5%;
+    height: 50px;
+    font-size: x-large;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+#websites-title::before {
+    content: "__MSG_websites_picker_title__";
+}
+
+#websites {
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: x-large;
+    line-height: 200%;
+}
+
+.socmed-check {
+    height: 20px;
+    width: 20px;
 }
 
 /* Bad Words Container */
@@ -49,7 +115,7 @@ body, html {
     float: right;
     align-items: stretch;
     border-left: 3px #000000;
-    height: 100%;
+    height: 90%;
     width: 70%;
     margin-top: 15px;
     margin-left: 15px;
@@ -59,7 +125,11 @@ body, html {
     float: left;
     font-size: 36px;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 5%;
+}
+
+#bad-words-title::before {
+    content: "__MSG_bad_words_title__";
 }
 
 #bad-words {
@@ -88,16 +158,48 @@ body, html {
     vertical-align: top;
 }
 
-#bad-words > span:hover {
+.bad-word:hover {
+    opacity: 0.7;
+}
+
+.bad-word> span:hover {
     opacity: 0.7;
 }
 
 #bad-words-input {
-    background: #eee;
+    background: #EEEEEE;
     border: 0;
     margin: 4px;
     padding: 7px;
     width: auto;
     height: 28px;
     font-size: 24px;
+}
+
+#bad-words-input:hover {
+    background-color: #DDDDDD;
+}
+
+#bad-words-input:focus {
+    background-color: #DDDDDD;
+}
+
+#bad-words-search-input-label {
+    vertical-align: center;
+    font-size: x-large;
+    min-height: 30px;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+#bad-words-search-input-label::before {
+    content: "__MSG_bad_word_search__";
+}
+
+#bad-words-search-input {
+    vertical-align: center;
+    margin-top: 10px;
+    min-height: 30px;
+    height: 30px;
+    font-size: x-large;
 }

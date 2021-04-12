@@ -1,0 +1,38 @@
+{
+  "warning_color_title": {
+    "message": "Warning Color"
+  },
+  "warning_color_text_example": {
+    "message": "Example of text on this background"
+  },
+  "audio_picker_title": {
+    "message": "Audio Warning"
+  },
+  "none_audio_choice": {
+    "message": "None"
+  },
+  "bright_audio_choice": {
+    "message": "Bright"
+  },
+  "glassy_audio_choice": {
+    "message": "Glassy"
+  },
+  "womp_audio_choice": {
+    "message": "Womp"
+  },
+  "wooden_mallet_audio_choice": {
+    "message": "Wooden Mallet"
+  },
+  "websites_picker_title": {
+    "message": "Run On Websites"
+  },
+  "bad_words_title": {
+    "message": "Bad Words"
+  },
+  "add_a_bad_word_placeholder": {
+    "message": "Add a word"
+  },
+  "bad_word_search": {
+    "message": "Search"
+  }
+}

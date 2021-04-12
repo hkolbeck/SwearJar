@@ -1,1 +1,2 @@
-setInterval(buildFinder(".editor-container", chrome.storage.sync), 500)
+let storage = chrome.storage.sync;
+setInterval(buildFinder(".editor-container", storage, checkEnabled(storage, "checkLinkedin")), 500)

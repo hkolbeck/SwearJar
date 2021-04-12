@@ -3,13 +3,18 @@
   "description": "Highlight words you don't want to use in social media post composers",
   "version": "0.0.1",
   "manifest_version": 3,
+  "default_locale": "en",
+  "background": {
+    "service_worker": "oninstall.js"
+  },
   "content_scripts": [
     {
       "matches": [
         "https://twitter.com/*"
       ],
       "js": [
-        "content_scripts/shared.js", "content_scripts/chrome/sj_twitter.js"
+        "content_scripts/shared.js",
+        "content_scripts/chrome/sj_twitter.js"
       ],
       "run_at": "document_idle"
     },
@@ -18,7 +23,8 @@
         "https://*.facebook.com/*"
       ],
       "js": [
-        "content_scripts/shared.js", "content_scripts/chrome/sj_facebook.js"
+        "content_scripts/shared.js",
+        "content_scripts/chrome/sj_facebook.js"
       ],
       "run_at": "document_idle"
     },
@@ -27,7 +33,8 @@
         "https://*.linkedin.com/*"
       ],
       "js": [
-        "content_scripts/shared.js", "content_scripts/chrome/sj_linkedin.js"
+        "content_scripts/shared.js",
+        "content_scripts/chrome/sj_linkedin.js"
       ],
       "run_at": "document_idle"
     },
@@ -36,7 +43,8 @@
         "https://*.instagram.com/*"
       ],
       "js": [
-        "content_scripts/shared.js", "content_scripts/chrome/sj_instagram.js"
+        "content_scripts/shared.js",
+        "content_scripts/chrome/sj_instagram.js"
       ],
       "run_at": "document_idle"
     }
@@ -52,7 +60,9 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "3rdparty/iro.min.js", "audio/*", "content_scripts/shared.js"
+        "3rdparty/iro.min.js",
+        "audio/*",
+        "content_scripts/shared.js"
       ],
       "matches": [
         "<all_urls>"
