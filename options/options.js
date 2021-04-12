@@ -2,19 +2,20 @@ let changed = false
 
 let colorPicker = new iro.ColorPicker('#color-picker', {
     width: 320,
-    color: "#FF0000"
+    color: "#DD0000"
 });
 colorPicker.on("color:change", () => {
     changed = true
 })
 
+let input = document.getElementById("bad-words-input")
 let wordBox = document.getElementById("saved-bad-words")
 let badWords = [];
 chrome.storage.sync.get(['badWords'], result => {
     badWords = result.badWords ? result.badWords : []
     badWords.forEach(word => {
         let span = buildWordSpan(word)
-        wordBox.appendChild(span)
+        wordBox.insertBefore(span, input)
     })
 })
 
@@ -39,7 +40,6 @@ function buildWordSpan(txt) {
     return span;
 }
 
-let input = document.getElementById("bad-words-input")
 input.addEventListener("focusout", function () {
     saveInput()
 })
@@ -58,12 +58,13 @@ input.addEventListener("keyup", function (ev) {
     ev.preventDefault()
 })
 
-let regexp = new RegExp('^\\P{Letter}$', 'iug')
+let regexp = new RegExp('\\P{Letter}', 'iug')
 function saveInput() {
     let txt = input.value.replace(regexp, '');
     if (txt) {
         let span = buildWordSpan(txt);
-        wordBox.appendChild(span)
+        wordBox.insertBefore(span, input)
+        console.log(txt)
         badWords.push(txt)
         changed = true
     }
@@ -73,9 +74,9 @@ function saveInput() {
 function addCloseListener(closer) {
     closer.addEventListener("click", () => {
         let parentElement = closer.parentElement;
+        let word = parentElement.childNodes[0].data;
         parentElement.remove()
 
-        let word = parentElement.childNodes[0].innerText;
         let idx = badWords.indexOf(word);
         if (idx > -1) {
             badWords.splice(idx, 1);
@@ -100,7 +101,6 @@ function sortUnique(arr) {
 
 function save() {
     if (changed) {
-        console.log(`Saving: [${badWords.join(",")}]`)
         chrome.storage.sync.set({
             warnColor: colorPicker.color.hexString,
             badWords: sortUnique(badWords)
