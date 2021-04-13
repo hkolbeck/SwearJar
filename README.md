@@ -4,6 +4,10 @@ SwearJar
 A Chrome extension that helps you stop using "bad" words on social media. You choose the words.
 
 
+https://user-images.githubusercontent.com/225933/114477283-d4b34580-9bb0-11eb-91a5-fb70014037b0.mov
+
+
+
 Loading
 -------
 
