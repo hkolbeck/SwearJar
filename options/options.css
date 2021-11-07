@@ -1,9 +1,25 @@
-body, html {
-    font-family: "Arial Black", sans-serif;
+html {
     width: 100%;
     height: 100%;
+}
+
+body {
+    font-family: "Arial Black", sans-serif;
+    width: 90%;
+    height: 90%;
     background-color: #FDFDFD;
-    overflow: hidden;
+    display: grid;
+    grid-template-areas: "wcolor words"
+                         "audio words"
+                         "site words";
+    grid-template-columns: 28% 62%;
+    grid-template-rows: 47% 17% 26%;
+    grid-gap: 15px;
+}
+
+#color-picker-box {
+    grid-area: wcolor;
+    /*margin-right: 10px;*/
 }
 
 #warning-color-title::before {
@@ -30,7 +46,6 @@ body, html {
     font-size: medium;
 }
 
-
 #color-picker-black-example {
     color: black;
     margin: 10px;
@@ -49,20 +64,9 @@ body, html {
     content: "__MSG_warning_color_text_example__";
 }
 
-
-#left-controls {
-    height: 100%;
-    width: 30%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    border-right: 10px double #555555;
-}
-
 .left-box {
-    margin: 15px;
     text-align: center;
+    overflow-x: scroll;
 }
 
 .left-title {
@@ -80,16 +84,21 @@ body, html {
 }
 
 #audio-picker-box {
-    min-height: 15%;
+    grid-area: audio;
+    /*margin-right: 10px;*/
 }
 
 #audio-alert {
     background-color: #eeeeee;
     margin-top: 5%;
-    height: 50px;
+    /*height: 50px;*/
     font-size: x-large;
-    width: 95%;
+    /*width: 95%;*/
     margin-bottom: 10px;
+}
+
+#website-picker-box {
+    grid-area: site;
 }
 
 #websites-title::before {
@@ -98,8 +107,6 @@ body, html {
 
 #websites {
     text-align: left;
-    margin-top: 5%;
-    margin-left: 10%;
     font-size: x-large;
     line-height: 200%;
 }
@@ -112,20 +119,19 @@ body, html {
 /* Bad Words Container */
 #bad-words-box {
     overflow: hidden;
-    float: right;
     align-items: stretch;
-    border-left: 3px #000000;
-    height: 90%;
-    width: 70%;
-    margin-top: 15px;
-    margin-left: 15px;
+    border-left: 10px double #555555;
+    padding-left: 10px;
+    grid-area: words;
+    width: 100%;
+    height: 100%;
 }
 
 #bad-words-title {
-    float: left;
+    /*float: left;*/
     font-size: 36px;
-    margin-bottom: 10px;
-    margin-left: 5%;
+    /*margin-bottom: 10px;*/
+    /*margin-left: 5%;*/
 }
 
 #bad-words-title::before {
@@ -137,7 +143,7 @@ body, html {
     display: flex;
     border: 1px solid #ccc;
     padding: 3px;
-    width: 92%;
+    /*width: 92%;*/
     height: 80%;
     vertical-align: top;
     margin: 0 auto;
