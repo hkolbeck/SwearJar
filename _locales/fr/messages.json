@@ -1,0 +1,38 @@
+{
+  "warning_color_title": {
+    "message": "Couleur d’avertissement"
+  },
+  "warning_color_text_example": {
+    "message": "Exemple de texte sur ce fond"
+  },
+  "audio_picker_title": {
+    "message": "Son d’alerte"
+  },
+  "none_audio_choice": {
+    "message": "Aucun"
+  },
+  "bright_audio_choice": {
+    "message": "Aigu"
+  },
+  "glassy_audio_choice": {
+    "message": "Crystal"
+  },
+  "womp_audio_choice": {
+    "message": "Womp"
+  },
+  "wooden_mallet_audio_choice": {
+    "message": "Maillet"
+  },
+  "websites_picker_title": {
+    "message": "Fonctionne sur les sites"
+  },
+  "bad_words_title": {
+    "message": "Mots que j’essaie d’éviter"
+  },
+  "add_a_bad_word_placeholder": {
+    "message": "Ajouter un mot"
+  },
+  "bad_word_search": {
+    "message": "Recherche"
+  }
+}
